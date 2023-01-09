@@ -1,4 +1,4 @@
-name: react
+ name: react
 on:
   push:
     branches:
@@ -24,9 +24,9 @@ jobs:
         with:
           branch: main
           tag_prefix: "v"
-          major_pattern: "major:"
-          minor_pattern: "minor:"
-          version_format: "v${major}.${minor}.${increment}"
+          major_pattern: "BREAKING CHANGE:"
+          minor_pattern: "feat:"
+          version_format: "v${major}.${minor}.${patch}-${increment}"
           bump_each_commit: true
           namespace: db
      
