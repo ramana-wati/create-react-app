@@ -24,9 +24,12 @@ jobs:
         with:
           branch: main
           tag_prefix: "v"
-          major_pattern: "BREAKING CHANGE:"
-          minor_pattern: "feat:"
-          format: "v${major}.${minor}.${patch}-prereleases${increment}"
+          major_pattern: "(MAJOR)"
+          minor_pattern: "(MINOR)"
+          format: "v${major}.${minor}.${patch}-${increment}"
+          namespace: my-service
+          bump_each_commit: true
+
      
       - name: npm install
         run: | 
@@ -50,7 +53,3 @@ jobs:
           prerelease: true
   
       
-      
-      
-      
-          
