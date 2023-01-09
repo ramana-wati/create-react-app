@@ -24,9 +24,9 @@ jobs:
         with:
           branch: main
           tag_prefix: "v"
-          major_pattern: "(MAJOR-DB)"
-          minor_pattern: "(MINOR-DB)"
-          version_format: "v${major}.${minor}.${patch}-${increment}"
+          major_pattern: "(major)"
+          minor_pattern: "(minor)"
+          version_format: "v${major}.${minor}.${increment}"
           bump_each_commit: true
           namespace: db
      
