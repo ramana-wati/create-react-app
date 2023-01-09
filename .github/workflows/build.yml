@@ -24,11 +24,11 @@ jobs:
         with:
           branch: main
           tag_prefix: "v"
-          major_pattern: "(MAJOR)"
-          minor_pattern: "(MINOR)"
+          major_pattern: "(MAJOR-DB)"
+          minor_pattern: "(MINOR-DB)"
           version_format: "v${major}.${minor}.${patch}-${increment}"
           bump_each_commit: true
-
+          namespace: db
      
       - name: npm install
         run: | 
