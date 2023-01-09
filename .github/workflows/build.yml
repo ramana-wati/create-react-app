@@ -26,8 +26,7 @@ jobs:
           tag_prefix: "v"
           major_pattern: "(MAJOR)"
           minor_pattern: "(MINOR)"
-          format: "v${major}.${minor}.${patch}-${increment}"
-          namespace: my-service
+          version_format: "v${major}.${minor}.${patch}-${increment}"
           bump_each_commit: true
 
      
