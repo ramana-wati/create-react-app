@@ -1,13 +1,13 @@
  name: react
-on:
+ on:
   push:
     branches:
       - 'main'
       
-env:
+ env:
   IMG_NAME: "react"
   TAG: "latest"      
-jobs:
+ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
