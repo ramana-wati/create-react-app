@@ -26,9 +26,7 @@
           tag_prefix: "v"
           major_pattern: "BREAKING CHANGE:"
           minor_pattern: "feat:"
-          version_format: "v${major}.${minor}.${patch}-${increment}"
-          bump_each_commit: true
-          namespace: db
+          version_format: "${major}.${minor}.${patch}-prerelease${increment}"
      
       - name: npm install
         run: | 
