@@ -22,8 +22,8 @@
         with:
           branch: main
           tag_prefix: "v"
-          major_pattern: "BREAKING CHANGE:"
-          minor_pattern: "feat:"
+          major_pattern: "MAJOR:"
+          minor_pattern: "MINOR:"
           version_format: "v${major}.${minor}.${increment}"
 
       - name: Setup Node
