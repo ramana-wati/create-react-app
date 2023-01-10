@@ -11,12 +11,10 @@
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3.0.0
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
-          node-version: 16
-          cache: 'npm'
+          fetch-depth: 0
           
       - name: Semantic versioning
         id: versioning
@@ -27,6 +25,12 @@
           major_pattern: "BREAKING CHANGE:"
           minor_pattern: "feat:"
           version_format: "v${major}.${minor}.${patch}-${increment}"
+
+      - name: Setup Node
+        uses: actions/setup-node@v3.0.0
+        with:
+          node-version: 16
+          cache: 'npm'
      
       - name: npm install
         run: | 
